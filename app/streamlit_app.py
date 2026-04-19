@@ -48,7 +48,7 @@ st.markdown("""
 def load_model():
     try:
         base = Path(__file__).resolve().parents[1]
-        model = joblib.load(base / "models" / "logistic_regression.pkl")
+        model = joblib.load(base / "models" / "xgboost.pkl")
         preprocessor = joblib.load(base / "models" / "preprocessor.pkl")
         feature_names = joblib.load(base / "models" / "feature_names.pkl")
         return model, preprocessor, feature_names, True
