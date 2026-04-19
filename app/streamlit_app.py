@@ -70,7 +70,7 @@ with st.sidebar:
     st.markdown("## ChurnShield")
     st.markdown("Customer Churn Intelligence")
     st.markdown("---")
-    page = st.radio("", ["Predict", "Data Explorer", "Model Performance", "About"])
+    page = st.radio("Navigation", ["Predict", "Data Explorer", "Model Performance", "About"], label_visibility="collapsed")
     st.markdown("---")
 
     churn_rate = df_data["Churn"].eq("Yes").mean() if "Churn" in df_data.columns else 0.265
