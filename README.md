@@ -1,3 +1,4 @@
+https://fahnz6ep2icq5inth4pw3y.streamlit.app/
 # ChurnShield — Customer Churn Prediction
 
 An end-to-end machine learning project for predicting customer churn in the telecom industry. Built to demonstrate a full ML workflow: from raw data and exploratory analysis, through feature engineering and model training, to a deployable prediction dashboard.
