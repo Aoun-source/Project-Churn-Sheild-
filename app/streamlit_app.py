@@ -44,11 +44,13 @@ st.markdown("""
 
 
 @st.cache_resource
+@st.cache_resource
 def load_model():
     try:
-        model = joblib.load(BEST_MODEL_PATH)
-        preprocessor = joblib.load(PREPROCESSOR_PATH)
-        feature_names = joblib.load(FEATURE_NAMES_PATH)
+        base = Path(__file__).resolve().parents[1]
+        model = joblib.load(base / "models" / "logistic_regression.pkl")
+        preprocessor = joblib.load(base / "models" / "preprocessor.pkl")
+        feature_names = joblib.load(base / "models" / "feature_names.pkl")
         return model, preprocessor, feature_names, True
     except Exception:
         return None, None, None, False
